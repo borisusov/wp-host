@@ -1,6 +1,8 @@
 # wp-host
   Site with WORDPRESS with self-signed certificate
 
+
+
 ### Project prerequizites:
 - VirtualBox (ver. >5.0)
 - Vagrant (ver. >2.0)
