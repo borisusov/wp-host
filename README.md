@@ -1,5 +1,5 @@
 # wp-host
-## Site with WORDPRESS with self-signed certificate
+  Site with WORDPRESS with self-signed certificate
 
 ### Project prerequizites:
 - VirtualBox (ver. >5.0)
