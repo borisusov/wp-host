@@ -24,6 +24,7 @@
 #### Notes:
 --------------------------------------------------------------------
 Do not forget update document root:
+
 root@vagrant:~# vim /etc/apache2/sites-enabled/000-default.conf 
 
 <VirtualHost *:80>
