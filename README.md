@@ -23,7 +23,7 @@
 
 #### Notes:
 --------------------------------------------------------------------
-Do not forget update document root:
+_Do not forget update document root:_
 
 root@vagrant:~# vim /etc/apache2/sites-enabled/000-default.conf 
 
