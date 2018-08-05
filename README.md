@@ -19,6 +19,17 @@
 
 #### Usage:
 
-- Start VM:
-  vagrant up  
- 
+- Start VM:   vagrant up  
+
+#### Notes:
+--------------------------------------------------------------------
+Do not forget update document root:
+root@vagrant:~# vim /etc/apache2/sites-enabled/000-default.conf 
+
+<VirtualHost *:80>
+  ServerAdmin webmaster@localhost
+
+  DocumentRoot /var/www/html
+. . . .
+-------------------------------------------------------------------
+
