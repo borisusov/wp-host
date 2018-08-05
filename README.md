@@ -31,5 +31,3 @@ root@vagrant:~# vim /etc/apache2/sites-enabled/000-default.conf
 
   DocumentRoot /var/www/html
 . . . .
--------------------------------------------------------------------
-
