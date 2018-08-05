@@ -30,4 +30,6 @@ root@vagrant:~# vim /etc/apache2/sites-enabled/000-default.conf
   ServerAdmin webmaster@localhost
 
   DocumentRoot /var/www/html
-. . . .
+  
+  ...
+  
