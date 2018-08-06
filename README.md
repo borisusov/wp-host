@@ -24,7 +24,7 @@
 
 #### Notes:
 --------------------------------------------------------------------
-*Do not forget update document root:*
+1. =Do not forget update document root:=
 
 _root@vagrant:~# vim /etc/apache2/sites-enabled/000-default.conf_  
 ...  
@@ -35,3 +35,5 @@ _root@vagrant:~# vim /etc/apache2/sites-enabled/000-default.conf_
   DirectoryIndex index.php index.html  
 ...  
 
+2. =Enable SSL apache module:=  
+   sudo a2enmod ssl
