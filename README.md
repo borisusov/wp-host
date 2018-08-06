@@ -20,7 +20,8 @@
 
 #### Usage:
 
-- Start VM:   vagrant up  
+- _Start VM:_    
+   vagrant up  
 
 #### Notes:
 --------------------------------------------------------------------
@@ -32,7 +33,6 @@ root@vagrant:~# vim /etc/apache2/sites-enabled/000-default.conf
   ServerAdmin webmaster@localhost
 
   DocumentRoot /var/www/html
-  DirectoryIndex index.php index.html
- 
-  ...
-  
+  DirectoryIndex index.php index.html  
+  ...  
+
