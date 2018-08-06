@@ -35,5 +35,5 @@ _root@vagrant:~# vim /etc/apache2/sites-enabled/000-default.conf_
   DirectoryIndex index.php index.html  
 ...  
 
-2. Enable SSL apache module:
+2. Enable SSL apache module:  
    sudo a2enmod ssl
