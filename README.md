@@ -14,7 +14,8 @@
 
 #### Documentation:
 - [WP installation](https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-ubuntu-14-04)
-- [Setup self-signed SSL](https://devcenter.heroku.com/articles/ssl-certificate-self)
+- [Configure Apache self-signed SSL cert:](https://www.sslshopper.com/article-how-to-create-and-install-an-apache-self-signed-certificate.html)
+
 - [Automate openssl](https://www.shellhacks.com/create-csr-openssl-without-prompt-non-interactive/)
 
 #### Usage:
