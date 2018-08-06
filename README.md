@@ -25,14 +25,14 @@
 
 #### Notes:
 --------------------------------------------------------------------
-_Do not forget update document root:_
+*Do not forget update document root:*
 
-root@vagrant:~# vim /etc/apache2/sites-enabled/000-default.conf 
-
+_root@vagrant:~# vim /etc/apache2/sites-enabled/000-default.conf_  
+...  
 <VirtualHost *:80>
   ServerAdmin webmaster@localhost
 
   DocumentRoot /var/www/html
   DirectoryIndex index.php index.html  
-  ...  
+...  
 
