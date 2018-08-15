@@ -74,3 +74,12 @@ SHELL
 end
                                                                                                       
 
+
+#### How to pass parameter to Vagrantfile (for pass PASSWORD to provision script)
+## Use (there are no error here): SECRET=SuperBOOPERsecreT vagrant up
+###
+#config.vm.provision "shell", args: ENV['SECRET'], inline: <<-SHELL
+#     echo $1 | tee > secret.txt 
+#SHELL
+
+
