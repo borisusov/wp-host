@@ -1,5 +1,5 @@
-# wp-host
-  The WORDPRESS site with self-signed certificate
+# wp-host.sh
+##  The WordPress site with self-signed certificate
 =============================================================================================
 
 
