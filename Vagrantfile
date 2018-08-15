@@ -81,5 +81,8 @@ end
 #config.vm.provision "shell", args: ENV['SECRET'], inline: <<-SHELL
 #     echo $1 | tee > secret.txt 
 #SHELL
+## Ecrypt/decrypt with openssl
+#   openssl aes-256-cbc -a -salt -in tst.txt -pass pass:BLA-BLA -out tst.enc
+#   openssl aes-256-cbc -a -d -in tst.enc -pass pass:BLA-BLA -out tst.txt
 
 
