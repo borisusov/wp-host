@@ -21,7 +21,8 @@
 
 - _Start VM:_    
    vagrant up  
-
+- _Visit WP site:_  
+   [http://localhost:8080](http://localhost:8080)
 ----------------------------------------------------------------------------------------------
 
 #### Notes and fixed bugs:
