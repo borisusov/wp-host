@@ -39,6 +39,7 @@ _root@vagrant:~# vim /etc/apache2/sites-enabled/000-default.conf_
    sudo a2enmod ssl
 
 #### Setup history:  
+```
     1  ll
     2  mysql -u root -p
     3  mysql -u root -XXXXXX
@@ -168,3 +169,4 @@ _root@vagrant:~# vim /etc/apache2/sites-enabled/000-default.conf_
   127  sudo a2enmod ssl
   128  reboot
   129  history >/vagrant/setup-history.txt
+```
