@@ -22,7 +22,7 @@
 - _Start VM:_    
    vagrant up  
 
-#### Notes:
+#### Notes and fixed bugs:
 --------------------------------------------------------------------
 1. Do not forget update document root:
 
@@ -36,7 +36,10 @@ _root@vagrant:~# vim /etc/apache2/sites-enabled/000-default.conf_
 ...  
 
 2. Enable SSL apache module:  
-   sudo a2enmod ssl
+   _sudo a2enmod ssl_
+3. Update RW permissions on .../uploads folder:  
+   _chmod -R g+w /var/www/html/wp-content/uploads_
+
 
 #### Setup history:  
 ```
