@@ -36,9 +36,9 @@
   DirectoryIndex index.php index.html  
 ```  
 2. Enable SSL apache module:  
-   _sudo a2enmod ssl_
+   _# sudo a2enmod ssl_
 3. Update RW permissions on .../uploads folder:  
-   _chmod -R g+w /var/www/html/wp-content/uploads_
+   _# chmod -R g+w /var/www/html/wp-content/uploads_
 
 
 #### Setup history:  
