@@ -27,14 +27,13 @@
 1. Do not forget update document root:
 
 _root@vagrant:~# vim /etc/apache2/sites-enabled/000-default.conf_  
-...  
+```
 <VirtualHost *:80>
   ServerAdmin webmaster@localhost
 
   DocumentRoot /var/www/html  
   DirectoryIndex index.php index.html  
-...  
-
+```  
 2. Enable SSL apache module:  
    _sudo a2enmod ssl_
 3. Update RW permissions on .../uploads folder:  
