@@ -22,8 +22,9 @@
 - _Start VM:_    
    vagrant up  
 
+----------------------------------------------------------------------------------------------
+
 #### Notes and fixed bugs:
---------------------------------------------------------------------
 1. Do not forget update document root:  
    _root@vagrant:~# vim /etc/apache2/sites-enabled/000-default.conf_  
 ```
