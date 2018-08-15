@@ -1,15 +1,28 @@
 #/bin/bash
-set +x
+set -x
 
 # Check root pertmissions
 [ $(id -u) != 0 ] && echo "You should be root! Exitting ..." && exit 1
 
-MYSQL_ROOT_USER=debian-sys-maint
-MYSQL_ROOT_PASS=fxMWpBR0UaZzX5qm
-WP_USER=wordpressuser
-WP_USER_PASS=password
-DB_HOST=localhost
-WP_DB=wordpress
+
+## Export env vars from file
+VARSFILE=/vagrant/secret.vars
+ln -s $VARSFILE 
+
+export_lines() {
+    #echo ==$1
+    while IFS='' read -r line || [[ -n "$line" ]]; do
+        [ ! -z "$(echo "$line"|grep -Ev '^#' 2>/dev/null)" ] && export $line
+    done < "$1"
+}
+# Main export_lines()
+if [ ! -f "$VARSFILE" ]; then
+     echo ERROR: no VARSFILE found! Exitting ...
+     exit 5
+  else
+     [ -s "$VARSFILE" ] && export_lines "$VARSFILE"
+fi
+##
 
 ## Update apps and setup dependencies
 apt-get -y -qq update

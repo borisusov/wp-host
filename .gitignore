@@ -1,3 +1,4 @@
 /.vagrant
 /.vagrant
 *.box
+secret.vars
