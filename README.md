@@ -1,6 +1,6 @@
 # wp-host
-  Site with WORDPRESS with self-signed certificate
-
+  The WORDPRESS site with self-signed certificate
+=============================================================================================
 
 
 ### Project prerequizites:
