@@ -10,11 +10,11 @@ VARSFILE=/vagrant/secret.vars
 ln -s $VARSFILE 
 
 export_lines() {
-    #echo ==$1
     while IFS='' read -r line || [[ -n "$line" ]]; do
         [ ! -z "$(echo "$line"|grep -Ev '^#' 2>/dev/null)" ] && export $line
     done < "$1"
 }
+
 # Main export_lines()
 if [ ! -f "$VARSFILE" ]; then
      echo ERROR: no VARSFILE found! Exitting ...
@@ -23,6 +23,7 @@ if [ ! -f "$VARSFILE" ]; then
      [ -s "$VARSFILE" ] && export_lines "$VARSFILE"
 fi
 ##
+
 
 ## Update apps and setup dependencies
 apt-get -y -qq update
