@@ -10,20 +10,38 @@
 #### Used resources:
 - vagrant box: [xplore/ubuntu-14.04](https://app.vagrantup.com/xplore/boxes/ubuntu-14.04)
   
-
-
-#### Used manuals:
-- [WP installation](https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-ubuntu-14-04)  
-- [Configure Apache self-signed SSL cert:](https://www.sslshopper.com/article-how-to-create-and-install-an-apache-self-signed-certificate.html)  
-- [Automate openssl](https://www.shellhacks.com/create-csr-openssl-without-prompt-non-interactive/)  
-
 #### Usage:
-
 - _Start VM:_    
    vagrant up  
 - _Visit WP site:_  
    [http://localhost:8080](http://localhost:8080)
 ----------------------------------------------------------------------------------------------
+
+#### Used manuals:
+- [WP installation](https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-ubuntu-14-04)  
+- [Configure Apache self-signed SSL cert:](https://www.sslshopper.com/article-how-to-create-and-install-an-apache-self-signed-certificate.html)  
+- [Automate openssl](https://www.shellhacks.com/create-csr-openssl-without-prompt-non-interactive/)  
+##### 
+But for me did not work for me until I edited pass:x to pass:xxxx, it required atleast 4 characters (atm im on mac) "shudders"
+
+which is just as stupid, so now i use this.
+
+###### Generate a passphrase
+openssl rand -base64 48 > passphrase.txt
+
+###### Generate a Private Key
+openssl genrsa -aes128 -passout file:passphrase.txt -out server.key 2777
+
+###### Generate a CSR (Certificate Signing Request)
+openssl req -new -passin file:passphrase.txt -key server.key -out server.csr \
+-subj "/C=FR/O=foo/OU=Domain Control Validated/CN=example.com"
+
+###### Remove Passphrase from Key
+cp server.key server.key.org
+openssl rsa -in server.key.org -passin file:passphrase.txt -out server.key
+
+###### Generating a Self-Signed Certificate for 100 years
+openssl x509 -req -days 36500 -in server.csr -signkey server.key -out server.crt
 
 #### Notes and fixed bugs:
 1. Do not forget update document root:  
