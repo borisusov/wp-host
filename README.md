@@ -21,11 +21,8 @@
 - [WP installation](https://www.digitalocean.com/community/tutorials/how-to-install-wordpress-on-ubuntu-14-04)  
 - [Configure Apache self-signed SSL cert:](https://www.sslshopper.com/article-how-to-create-and-install-an-apache-self-signed-certificate.html)  
 - [Automate openssl](https://www.shellhacks.com/create-csr-openssl-without-prompt-non-interactive/)  
-##### 
-But for me did not work for me until I edited pass:x to pass:xxxx, it required atleast 4 characters (atm im on mac) "shudders"
 
-which is just as stupid, so now i use this.
-
+##### ========================================================================================
 ###### Generate a passphrase
 openssl rand -base64 48 > passphrase.txt
 
