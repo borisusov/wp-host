@@ -22,7 +22,7 @@
 - [Configure Apache self-signed SSL cert:](https://www.sslshopper.com/article-how-to-create-and-install-an-apache-self-signed-certificate.html)  
 - [Automate openssl](https://www.shellhacks.com/create-csr-openssl-without-prompt-non-interactive/)  
 
-##### ========================================================================================
+##### Generate SSL self-signed certificate ===============================================================================
 ###### Generate a passphrase
 openssl rand -base64 48 > passphrase.txt
 
