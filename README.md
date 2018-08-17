@@ -22,7 +22,7 @@
 - [Configure Apache self-signed SSL cert:](https://www.sslshopper.com/article-how-to-create-and-install-an-apache-self-signed-certificate.html)  
 - [Automate openssl](https://www.shellhacks.com/create-csr-openssl-without-prompt-non-interactive/)  
 
-##### Generate SSL self-signed certificate ===============================================================================
+##### Generate SSL self-signed certificate 
 ###### Generate a passphrase
 openssl rand -base64 48 > passphrase.txt
 
@@ -39,6 +39,7 @@ openssl rsa -in server.key.org -passin file:passphrase.txt -out server.key
 
 ###### Generating a Self-Signed Certificate for 100 years
 openssl x509 -req -days 36500 -in server.csr -signkey server.key -out server.crt
+===================================================================================================
 
 #### Notes and fixed bugs:
 1. Do not forget update document root:  
