@@ -12,10 +12,6 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-<<<<<<< HEAD
-=======
-#  config.vm.box = "xplore/ubuntu-14.04"
->>>>>>> 284c81d57dc58af71e0804d2a7d1261b7e00833d
   config.vm.box = "xplore/ubuntu-14.04"
 
   # Disable automatic box update checking. If you disable this, then
@@ -26,11 +22,8 @@ Vagrant.configure("2") do |config|
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
-<<<<<<< HEAD
-=======
   # config.vm.network "forwarded_port", guest: 80, host: 8080
   config.vm.network "forwarded_port", guest: 80, host: 8080
->>>>>>> 284c81d57dc58af71e0804d2a7d1261b7e00833d
   config.vm.network "forwarded_port", guest: 443, host: 8443
 
   # Create a private network, which allows host-only access to the machine
@@ -41,10 +34,6 @@ Vagrant.configure("2") do |config|
   # Bridged networks make the machine appear as another physical device on
   # your network.
   # config.vm.network "public_network"
-<<<<<<< HEAD
-
-=======
->>>>>>> 284c81d57dc58af71e0804d2a7d1261b7e00833d
   # Share an additional folder to the guest VM. The first argument is
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
@@ -55,15 +44,6 @@ Vagrant.configure("2") do |config|
   # backing providers for Vagrant. These expose provider-specific options.
   # Example for VirtualBox:
   #
-<<<<<<< HEAD
-  # config.vm.provider "virtualbox" do |vb|
-  #   # Display the VirtualBox GUI when booting the machine
-  #   vb.gui = true
-  #
-  #   # Customize the amount of memory on the VM:
-  #   vb.memory = "1024"
-  # end
-=======
 config.vm.provider "virtualbox" do |vb|
   # Display the VirtualBox GUI when booting the machine
   vb.gui = false
@@ -71,7 +51,6 @@ config.vm.provider "virtualbox" do |vb|
   # Customize the amount of memory on the VM:
   vb.memory = "768"
 end
->>>>>>> 284c81d57dc58af71e0804d2a7d1261b7e00833d
   #
   # View the documentation for the provider you are using for more
   # information on available options.
@@ -83,20 +62,12 @@ end
   #   push.app = "YOUR_ATLAS_USERNAME/YOUR_APPLICATION_NAME"
   # end
 
-<<<<<<< HEAD
   # Enable provisioning with a shell script. Additional provisioners such as
-=======
-   # Enable provisioning with a shell script. Additional provisioners such as
->>>>>>> 284c81d57dc58af71e0804d2a7d1261b7e00833d
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
   # documentation for more information about their specific syntax and use.
-  # config.vm.provision "shell", inline: <<-SHELL
-  #   apt-get update
-  #   apt-get install -y apache2
-  # SHELL
+config.vm.provision "shell", inline: <<-SHELL
+  cd /root
+  ln -s /vagrant/wp_host.sh 
+  ./wp_host.sh
+SHELL
 end
-<<<<<<< HEAD
-=======
-                                                                                                      
-
->>>>>>> 284c81d57dc58af71e0804d2a7d1261b7e00833d

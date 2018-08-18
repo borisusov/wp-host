@@ -18,7 +18,7 @@ apt-get -y install php5-gd libssh2-php
 
 mysql -u"$MYSQL_ROOT_USER" -p"$MYSQL_ROOT_PASS" -e "CREATE DATABASE ${WP_DB};"
 mysql -u"$MYSQL_ROOT_USER" -p"$MYSQL_ROOT_PASS" -e "CREATE USER ${WP_USER}@${DB_HOST} IDENTIFIED BY \"${WP_USER_PASS}\";"
-mysql -u"$MYSQL_ROOT_USER" -p"$MYSQL_ROOT_PASS" -e "GRANT ALL PRIVILEGES ON ${WP_USER}.* TO ${WP_USER}@${DB_HOST};"
+mysql -u"$MYSQL_ROOT_USER" -p"$MYSQL_ROOT_PASS" -e "GRANT ALL PRIVILEGES ON ${WP_DB}.* TO ${WP_USER}@${DB_HOST};"
 mysql -u"$MYSQL_ROOT_USER" -p"$MYSQL_ROOT_PASS" -e "FLUSH PRIVILEGES;"
 
 cd ~
@@ -44,7 +44,7 @@ chown -R vagrant:www-data *
 mkdir /var/www/html/wp-content/uploads
 chown -R :www-data /var/www/html/wp-content/uploads
 sed -i 's~^  DocumentRoot .*$~  DocumentRoot /var/www/html~' /etc/apache2/sites-enabled/000-default.conf 
-service apache2 restart
+#service apache2 restart
 
 
 
