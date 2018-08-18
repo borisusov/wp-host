@@ -5,16 +5,14 @@ set -x
 [ $(id -u) != 0 ] && echo "You should be root! Exitting ..." && exit 1
 
 
-## Export env vars from file
+### Export env vars from file ###
 VARSFILE=/vagrant/secret.vars
 ln -s $VARSFILE 
-
 export_lines() {
     while IFS='' read -r line || [[ -n "$line" ]]; do
         [ ! -z "$(echo "$line"|grep -Ev '^#' 2>/dev/null)" ] && export $line
     done < "$1"
 }
-
 # Main export_lines()
 if [ ! -f "$VARSFILE" ]; then
      echo ERROR: no VARSFILE found! Exitting ...
@@ -22,8 +20,7 @@ if [ ! -f "$VARSFILE" ]; then
   else
      [ -s "$VARSFILE" ] && export_lines "$VARSFILE"
 fi
-##
-
+###  ###
 
 ## Update apps and setup dependencies
 apt-get -y -qq update
