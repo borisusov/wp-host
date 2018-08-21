@@ -39,7 +39,9 @@ openssl rsa -in server.key.org -passin file:passphrase.txt -out server.key
 
 ###### Generating a Self-Signed Certificate for 100 years
 openssl x509 -req -days 36500 -in server.csr -signkey server.key -out server.crt
-  
+
+##### Just another automated SSL [manual](http://crohr.me/journal/2014/generate-self-signed-ssl-certificate-without-prompt-noninteractive-mode.html)
+
 ==============================================================================================
 
 #### Notes and fixed bugs:
