@@ -67,7 +67,7 @@ end
   # documentation for more information about their specific syntax and use.
 config.vm.provision "shell", inline: <<-SHELL
   cd /root
-  ln -s /vagrant/wp_host.sh 
-  ./wp_host.sh
+  ln -s /vagrant/wp_setup.sh 
+  ./wp_setup.sh
 SHELL
 end
